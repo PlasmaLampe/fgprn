@@ -9,7 +9,8 @@ import {
   Text,
   View,
   TouchableOpacity,
-  ListView
+  ListView,
+  AlertIOS
 } from 'react-native';
 
 import StatusbarBG from '../../components/statusbarBackground'
@@ -24,8 +25,27 @@ class StatusListView extends Component {
     var ds = new ListView.DataSource({rowHasChanged: (r1,r2) => r1 != r2});
 
     this.state = {
-      stores : ds.cloneWithRows(MockStores.getMocks())
+      stores : ds.cloneWithRows([])
     }
+
+
+    // load store info from backend
+    fetch("http://localhost:3000/store", {method: "GET"})
+    .then((response) => {
+      var data = response.json()
+      return data;
+    })
+    .then((responseData) => {
+
+      this.setState({
+           //dataSource: this.state.dataSource.cloneWithRows(newArray),
+           //db: newArray,
+           stores: this.state.stores.cloneWithRows(responseData)
+       });
+
+    })
+    .done();
+
   }
 
   _renderStoreRow(store) {
