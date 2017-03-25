@@ -14,6 +14,7 @@ import {
 } from 'react-native';
 
 import StatusbarBG from '../../components/statusbarBackground'
+import Homebar from '../../components/homebar'
 import MockStores from '../../models/store'
 
 
@@ -71,8 +72,7 @@ class StatusListView extends Component {
       return (
         <View style={styles.StatusListView}>
           <StatusbarBG />
-
-          <Text style={styles.headerline}>{'Wo gibt es was zu essen?'}</Text>
+          <Homebar />
 
           <ListView
             style={{marginTop: 20}}
@@ -114,7 +114,7 @@ const styles = StyleSheet.create({
   },
 
   storeInfoButton: {
-    color: 'lightgreen',
+    color: 'navy',
     width: 10,
     height: 10
   }

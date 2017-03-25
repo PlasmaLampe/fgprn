@@ -42,7 +42,7 @@ var mockStores = [{
 	},
 	{
     uuid : guid(),
-    name : 'Pizza Pazza',
+    name : 'Pizza Pazza CGN',
     street : 'Somewhere',
     city : 'Cologne',
     plz : '12345'

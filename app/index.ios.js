@@ -14,14 +14,12 @@ import {
 
 import StatusListView from './common/screens/statusList/statusList'
 import StatusbarBG from './common/components/statusbarBackground'
+import Homebar from './common/components/homebar'
 
 export default class app extends Component {
   render() {
     return (
-        <StatusListView>
-          <StatusbarBG />
-
-        </StatusListView>
+        <StatusListView/>
     );
   }
 }
