@@ -15,7 +15,9 @@ import {
 
 import StatusbarBG from '../../components/statusbarBackground'
 import Homebar from '../../components/homebar'
+import Buttonbar from '../../components/buttonbar'
 import MockStores from '../../models/store'
+import Colors from '../../stylings/colors'
 
 
 class StatusListView extends Component {
@@ -77,8 +79,11 @@ class StatusListView extends Component {
           <ListView
             style={{marginTop: 20}}
             dataSource={this.state.stores}
+            enableEmptySections={true}
             renderRow={(store) => { return this._renderStoreRow(store)} }>
           </ListView>
+
+          <Buttonbar />
         </View>
       )
   }

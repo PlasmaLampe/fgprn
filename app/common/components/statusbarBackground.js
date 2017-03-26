@@ -7,6 +7,7 @@ import {
   Text,
   View
 } from 'react-native';
+import Colors from '../stylings/colors'
 
 class StatusbarBG extends Component {
 
@@ -22,7 +23,7 @@ class StatusbarBG extends Component {
 const styles = StyleSheet.create({
   StatusbarBG: {
     height: 20,
-    backgroundColor: "lightblue"
+    backgroundColor: Colors.colorSecondary12
   }
 });
 
