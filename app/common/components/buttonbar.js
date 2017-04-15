@@ -38,7 +38,7 @@ class Buttonbar extends Component {
 
             <Button
               onPress={this._onAddRestaurant}
-              title="Add restaurant"
+              title="Add restaurant to grp"
               color={Colors.colorPrimary5}
               accessibilityLabel="Add a new restaurant to the current group"
             />

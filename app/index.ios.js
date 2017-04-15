@@ -13,6 +13,8 @@ import {
 } from 'react-native';
 
 import StatusListView from './common/screens/statusList/statusList'
+import AddRestView from './common/screens/addRest/addRest'
+import AddGroupView from './common/screens/addGrp/addGrp'
 import StatusbarBG from './common/components/statusbarBackground'
 import Homebar from './common/components/homebar'
 
